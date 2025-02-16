@@ -6,7 +6,11 @@ const PORT = process.env.PORT | 3000;
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: ["http://localhost:5173", "https://polls-backend.app", "https://fast-polls.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 app.use(express.json());
 
 app.post('/api/createpoll', async (req, res) => {
