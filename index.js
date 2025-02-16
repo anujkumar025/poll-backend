@@ -7,7 +7,7 @@ const PORT = process.env.PORT | 3000;
 const app = express();
 
 app.use(cors({
-    origin: ["http://localhost:5173", "https://polls-backend.app", "https://fast-polls.vercel.app"],
+    origin: ["http://localhost:5173", "https://polls-backend.netlify.app", "https://fast-polls.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
